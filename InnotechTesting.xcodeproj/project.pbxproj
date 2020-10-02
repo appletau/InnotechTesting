@@ -10,9 +10,17 @@
 		D78DF85CD403B2FBE86E9636 /* Pods_InnotechTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1461EE016D1F8C1B8C13050D /* Pods_InnotechTesting.framework */; };
 		E2BDB401252728F9005DE965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB400252728F9005DE965 /* AppDelegate.swift */; };
 		E2BDB403252728F9005DE965 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB402252728F9005DE965 /* SceneDelegate.swift */; };
-		E2BDB405252728F9005DE965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB404252728F9005DE965 /* ViewController.swift */; };
+		E2BDB405252728F9005DE965 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB404252728F9005DE965 /* HomeViewController.swift */; };
 		E2BDB40A252728FE005DE965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BDB409252728FE005DE965 /* Assets.xcassets */; };
 		E2BDB40D252728FE005DE965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BDB40B252728FE005DE965 /* LaunchScreen.storyboard */; };
+		E2BDB416252740D0005DE965 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB415252740D0005DE965 /* APIProtocol.swift */; };
+		E2BDB418252743B8005DE965 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB417252743B8005DE965 /* APIService.swift */; };
+		E2BDB41B25274A7B005DE965 /* ExtensionRxMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB41A25274A7B005DE965 /* ExtensionRxMoya.swift */; };
+		E2BDB41E25274FCE005DE965 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB41D25274FCE005DE965 /* PhotoModel.swift */; };
+		E2BDB4202527503A005DE965 /* PhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB41F2527503A005DE965 /* PhotoAPI.swift */; };
+		E2BDB42225275C00005DE965 /* APIPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42125275C00005DE965 /* APIPlugin.swift */; };
+		E2BDB42525275EA6005DE965 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42425275EA6005DE965 /* ViewModel.swift */; };
+		E2BDB42825275F44005DE965 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42725275F44005DE965 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +30,18 @@
 		E2BDB3FD252728F9005DE965 /* InnotechTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnotechTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BDB400252728F9005DE965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2BDB402252728F9005DE965 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E2BDB404252728F9005DE965 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2BDB404252728F9005DE965 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E2BDB409252728FE005DE965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2BDB40C252728FE005DE965 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2BDB40E252728FE005DE965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2BDB415252740D0005DE965 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
+		E2BDB417252743B8005DE965 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E2BDB41A25274A7B005DE965 /* ExtensionRxMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionRxMoya.swift; sourceTree = "<group>"; };
+		E2BDB41D25274FCE005DE965 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		E2BDB41F2527503A005DE965 /* PhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPI.swift; sourceTree = "<group>"; };
+		E2BDB42125275C00005DE965 /* APIPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPlugin.swift; sourceTree = "<group>"; };
+		E2BDB42425275EA6005DE965 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E2BDB42725275F44005DE965 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +94,62 @@
 		E2BDB3FF252728F9005DE965 /* InnotechTesting */ = {
 			isa = PBXGroup;
 			children = (
+				E2BDB42325275E93005DE965 /* Protocol */,
+				E2BDB41925274A5C005DE965 /* Extension */,
+				E2BDB41425274084005DE965 /* Networking */,
+				E2BDB42625275F1D005DE965 /* Home */,
 				E2BDB400252728F9005DE965 /* AppDelegate.swift */,
 				E2BDB402252728F9005DE965 /* SceneDelegate.swift */,
-				E2BDB404252728F9005DE965 /* ViewController.swift */,
 				E2BDB409252728FE005DE965 /* Assets.xcassets */,
 				E2BDB40B252728FE005DE965 /* LaunchScreen.storyboard */,
 				E2BDB40E252728FE005DE965 /* Info.plist */,
 			);
 			path = InnotechTesting;
+			sourceTree = "<group>";
+		};
+		E2BDB41425274084005DE965 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E2BDB415252740D0005DE965 /* APIProtocol.swift */,
+				E2BDB417252743B8005DE965 /* APIService.swift */,
+				E2BDB42125275C00005DE965 /* APIPlugin.swift */,
+				E2BDB41C25274F91005DE965 /* Photo */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E2BDB41925274A5C005DE965 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E2BDB41A25274A7B005DE965 /* ExtensionRxMoya.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E2BDB41C25274F91005DE965 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				E2BDB41F2527503A005DE965 /* PhotoAPI.swift */,
+				E2BDB41D25274FCE005DE965 /* PhotoModel.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		E2BDB42325275E93005DE965 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E2BDB42425275EA6005DE965 /* ViewModel.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E2BDB42625275F1D005DE965 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E2BDB404252728F9005DE965 /* HomeViewController.swift */,
+				E2BDB42725275F44005DE965 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +266,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2BDB405252728F9005DE965 /* ViewController.swift in Sources */,
+				E2BDB416252740D0005DE965 /* APIProtocol.swift in Sources */,
+				E2BDB42825275F44005DE965 /* HomeViewModel.swift in Sources */,
+				E2BDB42225275C00005DE965 /* APIPlugin.swift in Sources */,
+				E2BDB41B25274A7B005DE965 /* ExtensionRxMoya.swift in Sources */,
+				E2BDB418252743B8005DE965 /* APIService.swift in Sources */,
+				E2BDB405252728F9005DE965 /* HomeViewController.swift in Sources */,
+				E2BDB41E25274FCE005DE965 /* PhotoModel.swift in Sources */,
+				E2BDB4202527503A005DE965 /* PhotoAPI.swift in Sources */,
 				E2BDB401252728F9005DE965 /* AppDelegate.swift in Sources */,
+				E2BDB42525275EA6005DE965 /* ViewModel.swift in Sources */,
 				E2BDB403252728F9005DE965 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
