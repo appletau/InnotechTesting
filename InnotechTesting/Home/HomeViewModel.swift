@@ -13,23 +13,32 @@ import RxCocoa
 class HomeViewModel: ViewModelType {
     
     struct Input {
-        
+        let filterText: AnyObserver<String>
     }
     
     struct Output {
-        
+        let photoList: Driver<[PhotoModel]>
     }
     
     let input: Input
     let output: Output
     
     private let photosApiResp = PublishRelay<[PhotoModel]>()
-    
     private let disposeBag = DisposeBag()
     
     init() {
-        self.input = Input()
-        self.output = Output()
+        let filterText = PublishSubject<String>()
+        let photoList = BehaviorRelay<[PhotoModel]>(value: [])
+        
+        self.input = Input(filterText: filterText.asObserver())
+        self.output = Output(photoList: photoList.asDriver())
+        
+        Observable.combineLatest(photosApiResp, filterText)
+            .map { (photos, text) -> [PhotoModel] in
+                return text.count > 0 ? photos.filter({ $0.title.contains(text) }) : photos
+        }
+        .bind(to: photoList)
+        .disposed(by: self.disposeBag)
         
         getPhotos()
     }
