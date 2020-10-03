@@ -21,6 +21,7 @@
 		E2BDB42225275C00005DE965 /* APIPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42125275C00005DE965 /* APIPlugin.swift */; };
 		E2BDB42525275EA6005DE965 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42425275EA6005DE965 /* ViewModel.swift */; };
 		E2BDB42825275F44005DE965 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42725275F44005DE965 /* HomeViewModel.swift */; };
+		E2BDB42B25280382005DE965 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42A25280382005DE965 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E2BDB42125275C00005DE965 /* APIPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPlugin.swift; sourceTree = "<group>"; };
 		E2BDB42425275EA6005DE965 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E2BDB42725275F44005DE965 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E2BDB42A25280382005DE965 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +150,17 @@
 			children = (
 				E2BDB404252728F9005DE965 /* HomeViewController.swift */,
 				E2BDB42725275F44005DE965 /* HomeViewModel.swift */,
+				E2BDB42925280351005DE965 /* Cell */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		E2BDB42925280351005DE965 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E2BDB42A25280382005DE965 /* HomeTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 				E2BDB41B25274A7B005DE965 /* ExtensionRxMoya.swift in Sources */,
 				E2BDB418252743B8005DE965 /* APIService.swift in Sources */,
 				E2BDB405252728F9005DE965 /* HomeViewController.swift in Sources */,
+				E2BDB42B25280382005DE965 /* HomeTableViewCell.swift in Sources */,
 				E2BDB41E25274FCE005DE965 /* PhotoModel.swift in Sources */,
 				E2BDB4202527503A005DE965 /* PhotoAPI.swift in Sources */,
 				E2BDB401252728F9005DE965 /* AppDelegate.swift in Sources */,
