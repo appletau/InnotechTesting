@@ -22,6 +22,15 @@
 		E2BDB42525275EA6005DE965 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42425275EA6005DE965 /* ViewModel.swift */; };
 		E2BDB42825275F44005DE965 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42725275F44005DE965 /* HomeViewModel.swift */; };
 		E2BDB42B25280382005DE965 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42A25280382005DE965 /* HomeTableViewCell.swift */; };
+		E2BDB4302528AADC005DE965 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB42F2528AADC005DE965 /* NoDataView.swift */; };
+		E2BDB4322528CD02005DE965 /* NetworkUIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB4312528CD02005DE965 /* NetworkUIHandler.swift */; };
+		E2BDB4342528CDBC005DE965 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB4332528CDBC005DE965 /* NetworkErrorView.swift */; };
+		E2BDB4362528D988005DE965 /* NetworkErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB4352528D988005DE965 /* NetworkErrorHandler.swift */; };
+		E2BDB43825295957005DE965 /* HomeSkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB43725295957005DE965 /* HomeSkeletonCell.swift */; };
+		E2BDB43A25295F9C005DE965 /* CellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB43925295F9C005DE965 /* CellDataModel.swift */; };
+		E2BDB43C25296004005DE965 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB43B25296004005DE965 /* ConfigurableCell.swift */; };
+		E2BDB43E25296083005DE965 /* HomeCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB43D25296083005DE965 /* HomeCellDataModel.swift */; };
+		E2BDB44025296178005DE965 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BDB43F25296178005DE965 /* ExtensionUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +53,15 @@
 		E2BDB42425275EA6005DE965 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E2BDB42725275F44005DE965 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E2BDB42A25280382005DE965 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		E2BDB42F2528AADC005DE965 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		E2BDB4312528CD02005DE965 /* NetworkUIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUIHandler.swift; sourceTree = "<group>"; };
+		E2BDB4332528CDBC005DE965 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
+		E2BDB4352528D988005DE965 /* NetworkErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorHandler.swift; sourceTree = "<group>"; };
+		E2BDB43725295957005DE965 /* HomeSkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSkeletonCell.swift; sourceTree = "<group>"; };
+		E2BDB43925295F9C005DE965 /* CellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDataModel.swift; sourceTree = "<group>"; };
+		E2BDB43B25296004005DE965 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		E2BDB43D25296083005DE965 /* HomeCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellDataModel.swift; sourceTree = "<group>"; };
+		E2BDB43F25296178005DE965 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +114,7 @@
 		E2BDB3FF252728F9005DE965 /* InnotechTesting */ = {
 			isa = PBXGroup;
 			children = (
+				E2BDB42E2528AAAC005DE965 /* ShareClass */,
 				E2BDB42325275E93005DE965 /* Protocol */,
 				E2BDB41925274A5C005DE965 /* Extension */,
 				E2BDB41425274084005DE965 /* Networking */,
@@ -124,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E2BDB41A25274A7B005DE965 /* ExtensionRxMoya.swift */,
+				E2BDB43F25296178005DE965 /* ExtensionUIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -141,6 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				E2BDB42425275EA6005DE965 /* ViewModel.swift */,
+				E2BDB4312528CD02005DE965 /* NetworkUIHandler.swift */,
+				E2BDB4352528D988005DE965 /* NetworkErrorHandler.swift */,
+				E2BDB43925295F9C005DE965 /* CellDataModel.swift */,
+				E2BDB43B25296004005DE965 /* ConfigurableCell.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -158,9 +182,20 @@
 		E2BDB42925280351005DE965 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E2BDB43D25296083005DE965 /* HomeCellDataModel.swift */,
 				E2BDB42A25280382005DE965 /* HomeTableViewCell.swift */,
+				E2BDB43725295957005DE965 /* HomeSkeletonCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		E2BDB42E2528AAAC005DE965 /* ShareClass */ = {
+			isa = PBXGroup;
+			children = (
+				E2BDB42F2528AADC005DE965 /* NoDataView.swift */,
+				E2BDB4332528CDBC005DE965 /* NetworkErrorView.swift */,
+			);
+			path = ShareClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,18 +312,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BDB43825295957005DE965 /* HomeSkeletonCell.swift in Sources */,
 				E2BDB416252740D0005DE965 /* APIProtocol.swift in Sources */,
+				E2BDB4342528CDBC005DE965 /* NetworkErrorView.swift in Sources */,
 				E2BDB42825275F44005DE965 /* HomeViewModel.swift in Sources */,
+				E2BDB4302528AADC005DE965 /* NoDataView.swift in Sources */,
+				E2BDB43A25295F9C005DE965 /* CellDataModel.swift in Sources */,
 				E2BDB42225275C00005DE965 /* APIPlugin.swift in Sources */,
 				E2BDB41B25274A7B005DE965 /* ExtensionRxMoya.swift in Sources */,
+				E2BDB4362528D988005DE965 /* NetworkErrorHandler.swift in Sources */,
+				E2BDB44025296178005DE965 /* ExtensionUIView.swift in Sources */,
 				E2BDB418252743B8005DE965 /* APIService.swift in Sources */,
+				E2BDB43E25296083005DE965 /* HomeCellDataModel.swift in Sources */,
 				E2BDB405252728F9005DE965 /* HomeViewController.swift in Sources */,
 				E2BDB42B25280382005DE965 /* HomeTableViewCell.swift in Sources */,
 				E2BDB41E25274FCE005DE965 /* PhotoModel.swift in Sources */,
+				E2BDB4322528CD02005DE965 /* NetworkUIHandler.swift in Sources */,
 				E2BDB4202527503A005DE965 /* PhotoAPI.swift in Sources */,
 				E2BDB401252728F9005DE965 /* AppDelegate.swift in Sources */,
 				E2BDB42525275EA6005DE965 /* ViewModel.swift in Sources */,
 				E2BDB403252728F9005DE965 /* SceneDelegate.swift in Sources */,
+				E2BDB43C25296004005DE965 /* ConfigurableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
