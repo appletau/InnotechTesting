@@ -10,7 +10,12 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, NetworkUIHandler {
+    
+    //MARK:- NetworkUIHandler
+    var targetView: UIView {
+        return tableview
+    }
     
     //MARK:- Property
     private lazy var tableview: UITableView = {
@@ -22,7 +27,8 @@ class HomeViewController: UIViewController {
         tableView.showsHorizontalScrollIndicator = false
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: String(describing: HomeTableViewCell.self))
+        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+        tableView.register(HomeSkeletonCell.self, forCellReuseIdentifier: HomeSkeletonCell.identifier)
         return tableView
     }()
     
@@ -86,17 +92,50 @@ class HomeViewController: UIViewController {
     }
     
     private func initBinding() {
-        viewModel.output.photoList
+        tableview.rx.willDisplayCell
+            .compactMap({ $0.cell as? HomeSkeletonCell })
+            .subscribe(onNext: { (cell) in
+                DispatchQueue.main.async {
+                    cell.showSkeletonAnimation()
+                }
+            })
+            .disposed(by: self.disposeBag)
+        
+        tableview.rx.didEndDisplayingCell
+            .compactMap({ $0.cell as? HomeSkeletonCell })
+            .subscribe(onNext: { (cell) in
+                cell.hideSkeletonAnimation()
+            })
+            .disposed(by: self.disposeBag)
+        
+        //input
+        searchController.searchBar.rx.text
+            .orEmpty
+            .bind(to: viewModel.input.filterText)
+            .disposed(by: self.disposeBag)
+        
+        networkErrorView.reloadButtonPressed
+            .bind(to: viewModel.input.reloadButtonPressed)
+            .disposed(by: self.disposeBag)
+        
+        //output
+        viewModel.output.dataStatus
+            .map({ $0.cellData })
             .drive(tableview.rx.items) { (tableView, row, model) -> UITableViewCell in
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeTableViewCell.self)) as? HomeTableViewCell else { return UITableViewCell() }
-                cell.configureCell(model: model)
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: model.cellIdentifier) else { return UITableViewCell() }
+                if let cell = cell as? ConfigurableCell { cell.configureCell(model: model) }
                 return cell
         }
         .disposed(by: self.disposeBag)
         
-        searchController.searchBar.rx.text
-            .orEmpty
-            .bind(to: viewModel.input.filterText)
+        viewModel.output.dataStatus
+            .map({ $0.shouldHideNoDataView })
+            .drive(noDataView.rx.isHidden)
+            .disposed(by: self.disposeBag)
+        
+        viewModel.output.networkError
+            .map({ $0 == .None ? 0 : 1 })
+            .drive(networkErrorView.rx.alpha)
             .disposed(by: self.disposeBag)
     }
 }
