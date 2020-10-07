@@ -43,6 +43,7 @@ class HomeTableViewCell: UITableViewCell, ConfigurableCell {
     //MARK:- Init
     override func prepareForReuse() {
         super.prepareForReuse()
+        thumbnailImageView.kf.cancelDownloadTask()
         thumbnailImageView.image = nil
         titleLabel.text = ""
     }
