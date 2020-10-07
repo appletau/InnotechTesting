@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, NetworkUIHandler {
     private lazy var tableview: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = .leastNormalMagnitude
+        tableView.estimatedRowHeight = 200
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
